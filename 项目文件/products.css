@@ -1,0 +1,201 @@
+
+@keyframes fadeInOut 
+{
+    0%, 100% {
+        opacity: 0;}
+    50% {
+        opacity: 1;}
+}
+
+@keyframes colorfulText {
+    0% {
+        background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+        background-clip: text; /* 使背景颜色应用到文本上，相当于剪切蒙版 */
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+    25% {
+        background: linear-gradient(45deg, #00ffff, #ffff00, #ff00ff, #00ffff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+    50% {
+        background: linear-gradient(45deg, #ffff00, #ff00ff, #00ffff, #ffff00);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+    75% {
+        background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+       
+    }
+    100% {
+        background: linear-gradient(45deg, #ffff00, #ff00ff, #00ffff, #ffff00);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+}
+
+body ,html {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 这三行用来使所有文本水平居中 */
+    width: 100%;
+    background-color: #bababa;
+}
+
+.side-image {
+    position: fixed;
+    width: 100px; /* 你可以根据需要调整图片宽度 */
+    height: auto; /* 保持图片比例 */
+    z-index: 1; /* 确保图片在内容下方 */
+}
+
+.side-image.left1 {
+    left: 0; /* 固定在左侧 */
+    top: 30px;
+}
+
+.side-image.right1 {
+    right: 0; /* 固定在右侧 */
+    top: 30px;
+}
+
+
+.side-image.right2 {
+    right: 0; /* 固定在右侧 */
+    bottom: 100px;
+}
+
+.side-image.left2 {
+    left: 0; /* 固定在左侧 */
+    bottom: 100px;
+}
+
+.title { 
+    letter-spacing: 5px;
+    color:rgb(162, 76, 76);
+    text-align: center; /* 水平居中 */
+    justify-content: center; /* 水平居中 */
+    font-size: 50px;
+    font-family: serif; 
+    margin-top: 30px;    
+    font-style: italic; /* 设置字体样式为斜体 */
+    /* animation: fadeInOut 2s alternate infinite; */
+    /* animation: colorfulText 5s alternate infinite; */
+
+}
+
+
+.header-container 
+{
+    background-image: url('格子.webp');
+    background-position: center; /* 使背景图片居中 */
+
+    width: 100%; /* 宽度占整个页面 */
+    padding: 10px 10px; /* 上下内边距 */
+    border-bottom: 1px solid #524646;
+    border-top: 10px dotted rgb(57, 45, 84);
+    border-right: 1px solid #524646;
+    border-left: 1px solid #524646;
+
+}
+
+img { /* 设置图片样式 */
+    width: 200px; /* 设置图片宽度 */
+    height: auto; /* 高度自适应，保持图片比例 */}
+
+.boxed { /* 边框 */
+    border: 1rem solid rgb(162, 76, 76); /* 边框样式 */
+    outline: 1rem solid rgb(57, 45, 84);   /* 边框样式 */
+    background-color: rgb(255, 233, 233);
+
+    border-radius: 10px; /* 圆角 */
+    font: bold 1rem sans-serif; /* 字体样式 */
+    padding: 1rem;  /* 内边距 */
+    
+    width: 100%; /* 宽度 */
+    height: 100px; /* 高度 */
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    line-height: 5px; /* 行高，用于垂直居中文本 */
+    box-sizing: content-box;    /* 包括内边距在内的宽度计算 */
+
+}
+
+
+/* 按钮容器样式 */
+
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    margin: 20px 0; /* 上下外边距 */}
+button { /* 设置按钮样式 */
+    margin: 5px;
+    background-color: rgb(255, 233, 233); /* 背景颜色 */
+    color: rgb(57, 45, 84); /* 文本颜色 */
+    border: 5px solid rgb(57, 45, 84); /* 去掉边框 */
+    border-radius: 5px; /* 圆角 */
+    padding: 10px 20px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    transition: background-color 0.3s; /* 背景颜色过渡效果 */
+    font-family: 'ZCOOL XiaoWei',serif; /* 设置特定字体 */
+
+}
+button:hover, button.active { /* 悬停时的样式 */
+    background-color: rgb(162, 76, 76); /* 背景颜色 */
+    color:white;
+}
+
+
+      /* 表格边框样式 */
+      table, th, td {
+        margin-top: 10px;
+        border-collapse: collapse;
+        width: 400px; /* 设置表格宽度 */
+        border-collapse: collapse; /* 边框合并，避免双线 */
+        border: 2pt solid rgb(0, 0, 0); /* 添加黑色边框 */
+        padding: 8px;}
+        
+      /* 表头样式 */
+      th {
+        background-color: #ffdbdb; /* 轻灰色背景 */
+        font-weight: bold; /* 加粗字体 */}
+      
+      /* 奇数行和偶数行样式 */
+      tr:nth-child(odd) {
+        background-color: #ffffff; /* 白色背景 */}
+      
+      tr:nth-child(even) {
+        background-color: #bababa; /* 浅灰色背景 */}
+      
+      /* 单元格样式 */
+      td {
+        height: 300px;
+        padding: 8px; /* 添加内边距 */
+        text-align: center; /* 文本居中对齐 */}
+
+
+    footer 
+        {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
